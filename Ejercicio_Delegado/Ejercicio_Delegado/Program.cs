@@ -33,7 +33,24 @@ void TextoUsuario()
     }
 }
 
+int? CalcularPromedio(List<int?> respuestaUsuario)
+{
+    int? suma = 0;
+    int i = 0;
+    int? prom;
+
+    foreach (int? numberTemp in respuestaUsuario)
+    {
+        suma =+ numberTemp;
+        i++;
+    }
+
+    return prom = suma / i;
+}
+
 #endregion
+
+#region Delegado
 
 //Delegados
 static int? VerificarInput(string inputUsuario)
@@ -50,3 +67,5 @@ static int? VerificarInput(string inputUsuario)
 }
 
 delegate int? VerificarInput(string inputUsuario);
+
+#endregion
