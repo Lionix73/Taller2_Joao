@@ -1,31 +1,28 @@
-﻿
-//Delegados
-/*delegate bool VerificarInput(string inputUsuario);
-
-static bool VerificarInput(string inputUsuario)
-{
-
-}*/
-
-//Variables Globales
+﻿//Variables Globales
+VerificarInput VerificarI = VerificarInput;
 
 //Llamado Funciones
 TextoUsuario();
 
+#region Funciones
+
+//Funciones
 void TextoUsuario()
 {
-    List<int> respuestaUsuario = new List<int>();
-    int numeroRespuesta;
+    List<int?> respuestaUsuario = new List<int?>();
+    int? numeroRespuesta;
 
     for (int i = 0; i < 5; i++)
     {
         Console.WriteLine($"Ingresa una 5 numeros enteros diferentes para un promedio. \n\nNumero #{i + 1}: \n");
         string tempInput = Console.ReadLine();
 
-        if (int.TryParse(tempInput, out numeroRespuesta))
+        numeroRespuesta = VerificarI(tempInput);
+
+        if (numeroRespuesta != null)
         {
-            respuestaUsuario.Add(numeroRespuesta);
             Console.Clear();
+            respuestaUsuario.Add(numeroRespuesta);
         }
         else
         {
@@ -35,3 +32,21 @@ void TextoUsuario()
         }
     }
 }
+
+#endregion
+
+//Delegados
+static int? VerificarInput(string inputUsuario)
+{
+    int inputCorrecto;
+    if (int.TryParse(inputUsuario, out inputCorrecto))
+    {
+        return inputCorrecto;
+    }
+    else
+    {
+        return null;
+    }
+}
+
+delegate int? VerificarInput(string inputUsuario);
