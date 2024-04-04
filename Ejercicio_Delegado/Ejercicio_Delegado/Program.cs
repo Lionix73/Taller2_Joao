@@ -37,6 +37,7 @@ void TextoUsuario()
     int? prom = CalcularPromedio(respuestaUsuario);
 
     MostrarPromedio(prom);
+    MostrarNumeros(respuestaUsuario);
 }
 
 int? CalcularPromedio(List<int?> respuestaUsuario)
@@ -46,7 +47,7 @@ int? CalcularPromedio(List<int?> respuestaUsuario)
 
     foreach (int? numberTemp in respuestaUsuario)
     {
-        suma =+ numberTemp;
+        suma = suma + numberTemp;
         i++;
     }
 
@@ -56,17 +57,19 @@ int? CalcularPromedio(List<int?> respuestaUsuario)
 void MostrarPromedio(int? prom)
 {
     Console.Clear ();
-    Console.WriteLine($"El promedio de tus numeros es: {prom}");
+    Console.WriteLine($"El promedio de tus numeros es: {prom} \n");
 }
 
 void MostrarNumeros(List<int?> respuestaUsuario)
 {
-    Console.WriteLine("Tus numeros son:");
+    Console.WriteLine("Tus numeros son: \n");
 
     foreach (int? numero in respuestaUsuario)
     {
-        Console.Write($"");
+        Console.Write($"{numero}\t");
     }
+
+    Console.WriteLine("\n------------------------------");
 }
 
 #endregion
