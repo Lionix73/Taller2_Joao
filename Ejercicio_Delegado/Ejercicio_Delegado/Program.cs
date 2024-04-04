@@ -23,6 +23,8 @@ void TextoUsuario()
         {
             Console.Clear();
             respuestaUsuario.Add(numeroRespuesta);
+
+            
         }
         else
         {
@@ -31,13 +33,16 @@ void TextoUsuario()
             Console.WriteLine("Texto Ingresado invalido\n");
         }
     }
+
+    int? prom = CalcularPromedio(respuestaUsuario);
+
+    MostrarPromedio(prom);
 }
 
 int? CalcularPromedio(List<int?> respuestaUsuario)
 {
     int? suma = 0;
     int i = 0;
-    int? prom;
 
     foreach (int? numberTemp in respuestaUsuario)
     {
@@ -45,7 +50,23 @@ int? CalcularPromedio(List<int?> respuestaUsuario)
         i++;
     }
 
-    return prom = suma / i;
+    return suma / i;
+}
+
+void MostrarPromedio(int? prom)
+{
+    Console.Clear ();
+    Console.WriteLine($"El promedio de tus numeros es: {prom}");
+}
+
+void MostrarNumeros(List<int?> respuestaUsuario)
+{
+    Console.WriteLine("Tus numeros son:");
+
+    foreach (int? numero in respuestaUsuario)
+    {
+        Console.Write($"");
+    }
 }
 
 #endregion
