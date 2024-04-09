@@ -1,5 +1,7 @@
-﻿//Variables Globales
+﻿#region Variables
+//Variables Globales
 VerificarInput VerificarI = VerificarInput;
+#endregion
 
 //Llamado Funciones
 TextoUsuario();
