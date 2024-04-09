@@ -78,7 +78,7 @@ void MostrarNumeros(List<int?> respuestaUsuario)
 
 #region Delegado
 
-//Delegados
+//Delegado
 static int? VerificarInput(string inputUsuario)
 {
     int inputCorrecto;
