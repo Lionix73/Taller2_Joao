@@ -7,5 +7,10 @@
         public delegate void EnoughPointsHandler(int points);
 
         public event EnoughPointsHandler? EnoughPoints;
+
+        public async void AddPoints(int points)
+        {
+
+        }
     }
 }
