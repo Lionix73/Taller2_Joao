@@ -10,7 +10,12 @@
 
         public async void AddPoints(int points)
         {
+            pointsGlobal =+ points;
 
+            if(pointsGlobal >= 100)
+            {
+                EnoughPoints.Invoke(pointsGlobal);
+            }
         }
     }
 }
