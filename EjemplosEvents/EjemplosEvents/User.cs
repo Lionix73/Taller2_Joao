@@ -4,7 +4,8 @@
     {
         public int pointsGlobal;
 
-        public event Action? EnoughPoints;
+        public delegate void EnoughPointsHandler(int points);
 
+        public event EnoughPointsHandler? EnoughPoints;
     }
 }
