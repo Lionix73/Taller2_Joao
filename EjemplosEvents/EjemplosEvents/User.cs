@@ -10,10 +10,10 @@
 
         public async void AddPoints(int points)
         {
-            pointsGlobal =+ points;
+            pointsGlobal += points;
             Console.WriteLine($"Puntos: {pointsGlobal}");
 
-            if (pointsGlobal >= 100)
+            if(pointsGlobal >= 100)
             {
                 
                 EnoughPoints?.Invoke(pointsGlobal);
