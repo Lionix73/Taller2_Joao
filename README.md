@@ -1,4 +1,4 @@
-# Taller 2 Joao
+# Taller 2 João
 ## Integrantes:
 Alejandro Lopez  
 Valeria Alvarez  
