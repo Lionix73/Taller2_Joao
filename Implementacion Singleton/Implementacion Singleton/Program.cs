@@ -3,5 +3,10 @@
     private static Singleton instance;
     private static readonly object lockObject = new object();
 
-    
+    private Singleton()
+    {
+        // Constructor 
+    }
+
+   
 }
