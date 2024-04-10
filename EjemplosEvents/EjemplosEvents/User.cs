@@ -15,7 +15,7 @@
             if(pointsGlobal >= 100)
             {
                 Console.WriteLine($"Puntos: {pointsGlobal}");
-                EnoughPoints.Invoke(pointsGlobal);
+                EnoughPoints?.Invoke(pointsGlobal);
             }
         }
     }
